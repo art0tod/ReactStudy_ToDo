@@ -1,32 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import './TodoListItem.css';
 
-const TodoListItem = ({label, important = false}) => {
+export default class TodoListItem extends Component {
 
-    const style = {
-        color: important ? 'tomato' : 'white',
-        fontWeight: important ? 'bold' : 'normal'
+    constructor() {
+        super();
+        this.onLabelClick = () => {
+            console.log(`${this.props.label} is done!`);
+
+        }
     }
 
-    return (
-        <span className={'TodoListItem'}>
-            <span className={'TodoItemLabel'}
-                  style={style}>
-                {label}
-            </span>
-            <span className={'TodoListButtons'}>
-                <button type={'button'}
-                        className={'btn btn-outline-success btn-sm float-right'}>
-                    <i className={'fa fa-exclamation'}/>
-                </button>
+    render() {
 
-                <button type={'button'}
-                        className={'btn btn-outline-danger btn-sm float-right'}>
-                    <i className={'fa fa-trash'}/>
-                </button>
-            </span>
-        </span>
-    );
-};
+        const { label, important = false } = this.props;
 
-export default TodoListItem;
+        const style = {
+            color: important ? 'tomato' : 'white',
+            fontWeight: important ? 'bold' : 'normal'
+        }
+
+        return (
+            <span className={'TodoListItem'}>
+                <span className={'TodoItemLabel'}
+                      style={style}
+                      onClick={ this.onLabelClick } >
+                    {label}
+                </span>
+                <span className={'TodoListButtons'}>
+                    <button type={'button'}
+                            className={'btn btn-outline-success btn-sm float-right'}>
+                        <i className={'fa fa-exclamation'}/>
+                    </button>
+
+                    <button type={'button'}
+                            className={'btn btn-outline-danger btn-sm float-right'}>
+                        <i className={'fa fa-trash'}/>
+                    </button>
+                </span>
+            </span>
+        );
+    };
+}

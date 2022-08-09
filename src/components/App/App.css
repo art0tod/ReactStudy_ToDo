@@ -1,7 +1,7 @@
 .todo-app {
-  margin: 5px auto 0 auto;
-  max-width: 400px;
-
+  margin: 1.5rem auto;
+  max-width: 90vw;
+  transition: 1s;
 }
 .todo-panel {
   margin: 1rem 0;

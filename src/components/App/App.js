@@ -12,7 +12,7 @@ const App = () => {
     const todoData = [
         { label: 'Выучить JS', important: true, id: 'ef' },
         { label: 'Сделать кофе', important: false, id: 'cj' },
-        { label: 'Выучить React', important: false, id: 'cj' },
+        { label: 'Выучить React', important: false, id: 'pj' },
         { label: 'Создать крутое приложение!!!', important: true, id: 'zr' }
     ];
 
