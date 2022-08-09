@@ -1,13 +1,14 @@
 .search-input {
-    margin-right: 10px;
-    border-radius: 10px;
-    background: hsl(0, 0%, 22%);
-    color: white;
-    border: 2px solid hsl(0, 0%, 10%);
-    box-shadow: 0 .25rem 1rem -.3rem #000000;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: hsl(0, 0%, 22%);
+  color: white;
+  border: 2px solid hsl(0, 0%, 10%);
+  box-shadow: 0 .25rem 1rem -.3rem #000000;
 }
+
 .form-control:focus {
-    background: hsl(0, 0%, 22%);
-    color: white;
-    border: 2px solid hsl(10, 70%, 60%);
+  background: hsl(0, 0%, 22%);
+  color: white;
+  border: 2px solid hsl(10, 70%, 60%);
 }

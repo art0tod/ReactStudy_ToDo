@@ -1,16 +1,17 @@
 .AppHeader {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    background: hsl(0, 0%, 22%);
-    padding: 1em;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: hsl(0, 0%, 22%);
+  padding: 1em;
+  border-radius: 10px;
 }
+
 .AppHeader h2 {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    color: hsl(10, 70%, 60%);
-    font-weight: 400;
-    font-size: large;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  color: hsl(10, 70%, 60%);
+  font-weight: 400;
+  font-size: large;
 }

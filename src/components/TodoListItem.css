@@ -1,33 +1,40 @@
 .TodoListItem {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
+
 .TodoListItem button {
-    width: 30px;
-    margin: 0 5px;
+  width: 30px;
+  margin: 0 5px;
 }
+
 .TodoItemLabel {
-    margin: 3px 0 5px .5rem;
-    line-height: 35px;
-    cursor: pointer;
-    user-select: none;
+  margin: 3px 0 5px .5rem;
+  line-height: 35px;
+  cursor: pointer;
+  user-select: none;
 }
-.TodoListItem.done .TodoItemLabel{
-    text-decoration: line-through;
+
+.TodoListItem.done .TodoItemLabel {
+  text-decoration: line-through;
 }
-.TodoListItem.important .TodoItemLabel{
-    font-weight: bold;
-    color: tomato;
+
+.TodoListItem.important .TodoItemLabel {
+  font-weight: bold;
+  color: tomato;
 }
+
 .btn-outline-success {
-    background: #40b440;
-    color: hsl(0, 0%, 30%);
-    position: relative;
+  background: #40b440;
+  color: hsl(0, 0%, 30%);
+  position: relative;
 }
+
 .btn-outline-danger {
-    background: #c43a3a;
-    color: hsl(0, 0%, 30%);
+  background: #c43a3a;
+  color: hsl(0, 0%, 30%);
 }
+
 .TodoListButtons {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }

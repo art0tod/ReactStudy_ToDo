@@ -1,7 +1,7 @@
 import React from "react";
 import './AppHeader.css';
 
-const AppHeader = ({ toDo, done }) => {
+const AppHeader = ({toDo, done}) => {
     return (
         <div className={'AppHeader d-flex'}>
             <h1>Список дел</h1>
