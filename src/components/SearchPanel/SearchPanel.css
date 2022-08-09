@@ -4,6 +4,7 @@
   background: hsl(0, 0%, 22%);
   color: white;
   border: none;
+  transition: 0.2s;
 }
 
 .form-control:focus {

@@ -13,6 +13,7 @@
   line-height: 35px;
   cursor: pointer;
   user-select: none;
+  transition: 0.2s;
 }
 
 .TodoListItem.done .TodoItemLabel {

@@ -4,7 +4,7 @@ import './AppHeader.css';
 const AppHeader = ({todo, done}) => {
     return (
         <div className={'AppHeader d-flex'}>
-            <h1>Список дел</h1>
+            <h1>Список задач</h1>
             <h2>{todo} в процессе, {done} готово</h2>
         </div>
     );

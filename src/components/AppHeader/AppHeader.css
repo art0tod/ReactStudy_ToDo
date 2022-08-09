@@ -3,7 +3,7 @@
   justify-content: space-between;
   color: white;
   background: hsl(0, 0%, 22%);
-  padding: 1em;
+  padding: 1rem;
   border-radius: 10px;
 }
 .AppHeader h1 {
