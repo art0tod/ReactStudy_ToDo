@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from 'react-dom';
+
+import AppHeader from "./components/AppHeader";
+import SearchPanel from "./components/SearchPanel";
+import TodoList from "./components/TodoList";
+import ItemStatusFilter from "./components/ItemStatusFilter";
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    const todoData = [
+        { label: 'Выучить JS', important: true, id: 'ef' },
+        { label: 'Сделать кофе', important: false, id: 'cj' },
+        { label: 'Выучить React', important: false, id: 'cj' },
+        { label: 'Создать крутое приложение!!!', important: true, id: 'zr' }
+    ];
+
+    return (
+        <div className={'todo-app'}>
+            <AppHeader todo={1} done={4}/>
+            <div className={'todo-panel d-flex'}>
+                <SearchPanel />
+                <ItemStatusFilter />
+            </div>
+
+            <TodoList todos={todoData} />
+        </div>
+    )
+};
+
+ReactDOM.render(<App />,
+    document.getElementById('root'));

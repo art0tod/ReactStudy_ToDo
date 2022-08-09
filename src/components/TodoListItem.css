@@ -1,0 +1,33 @@
+.TodoListItem {
+    font-size: 1.25rem;
+}
+.TodoListItem button {
+    width: 30px;
+    margin: 0 5px;
+}
+.TodoItemLabel {
+    margin: 3px 0 5px .5rem;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+.TodoListItem.done .TodoItemLabel{
+    text-decoration: line-through;
+}
+.TodoListItem.important .TodoItemLabel{
+    font-weight: bold;
+    color: tomato;
+}
+.btn-outline-success {
+    background: #40b440;
+    color: hsl(0, 0%, 30%);
+    position: relative;
+}
+.btn-outline-danger {
+    background: #c43a3a;
+    color: hsl(0, 0%, 30%);
+}
+.TodoListButtons {
+    display: flex;
+    justify-content: flex-end;
+}

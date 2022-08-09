@@ -1,0 +1,14 @@
+.btn-group {
+    border: 2px solid hsl(10, 70%, 60%);
+    border-radius: 10px;
+}
+.btn-group .btn {
+    background: hsl(0, 0%, 22%);
+}
+.btn-group .btn-info {
+    background: hsl(10, 70%, 60%);
+    border-radius: 10px;
+}
+.btn-group .btn-outline-secondary {
+    color: hsl(10, 50%, 60%);
+}
