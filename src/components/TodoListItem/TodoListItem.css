@@ -24,9 +24,13 @@
 }
 
 .btn-outline-success {
-  background: #40b440;
+  background: hsl(10, 70%, 60%);
   color: hsl(0, 0%, 30%);
-  position: relative;
+  border-color: tomato;
+}
+.btn-outline-success:hover {
+  background: tomato;
+  border-color: tomato;
 }
 
 .btn-outline-danger {

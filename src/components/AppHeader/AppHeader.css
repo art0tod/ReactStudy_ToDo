@@ -6,6 +6,10 @@
   padding: 1em;
   border-radius: 10px;
 }
+.AppHeader h1 {
+  font-size: x-large;
+  line-height: 30px;
+}
 
 .AppHeader h2 {
   display: flex;
@@ -14,4 +18,5 @@
   color: hsl(10, 70%, 60%);
   font-weight: 400;
   font-size: large;
+  line-height: 35px;
 }
