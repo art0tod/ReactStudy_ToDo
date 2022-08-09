@@ -1,5 +1,6 @@
 .TodoListItem {
   font-size: 1.25rem;
+  color: white;
 }
 
 .TodoListItem button {
@@ -20,17 +21,17 @@
 
 .TodoListItem.important .TodoItemLabel {
   font-weight: bold;
-  color: tomato;
+  color: hsl(10, 70%, 60%);
 }
 
 .btn-outline-success {
   background: hsl(10, 70%, 60%);
   color: hsl(0, 0%, 30%);
-  border-color: tomato;
+  border-color: hsl(10, 70%, 60%);
 }
 .btn-outline-success:hover {
   background: tomato;
-  border-color: tomato;
+  border-color: hsl(10, 70%, 60%);
 }
 
 .btn-outline-danger {

@@ -3,33 +3,53 @@ import './TodoListItem.css';
 
 export default class TodoListItem extends Component {
 
-    constructor() {
-        super();
-        this.onLabelClick = () => {
-            console.log(`${this.props.label} is done!`);
+    state = {
+        done: false,
+        important: false
+    };
 
-        }
-    }
+    onLabelClick = () => {
+        this.setState(({done}) => {
+            return {
+                done: !done
+            };
+        });
+
+        console.log(`${this.props.label} is done!`);
+    };
+
+    onMarkImportant = () => {
+        this.setState(({important}) => {
+            return {
+                important: !important
+            };
+        });
+    };
 
     render() {
 
-        const { label, important = false } = this.props;
+        const { label } = this.props;
+        const { done, important } = this.state;
 
-        const style = {
-            color: important ? 'tomato' : 'white',
-            fontWeight: important ? 'bold' : 'normal'
+        let classNames = "TodoListItem";
+        if (done) {
+            classNames += ' done';
+        }
+
+        if (important) {
+            classNames += ' important'
         }
 
         return (
-            <span className={'TodoListItem'}>
+            <span className={classNames}>
                 <span className={'TodoItemLabel'}
-                      style={style}
                       onClick={ this.onLabelClick } >
                     {label}
                 </span>
                 <span className={'TodoListButtons'}>
                     <button type={'button'}
-                            className={'btn btn-outline-success btn-sm float-right'}>
+                            className={'btn btn-outline-success btn-sm float-right'}
+                            onClick={this.onMarkImportant}>
                         <i className={'fa fa-exclamation'}/>
                     </button>
 
