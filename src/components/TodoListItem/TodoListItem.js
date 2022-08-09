@@ -3,33 +3,12 @@ import './TodoListItem.css';
 
 export default class TodoListItem extends Component {
 
-    state = {
-        done: false,
-        important: false
-    };
-
-    onLabelClick = () => {
-        this.setState(({done}) => {
-            return {
-                done: !done
-            };
-        });
-
-        console.log(`${this.props.label} is done!`);
-    };
-
-    onMarkImportant = () => {
-        this.setState(({important}) => {
-            return {
-                important: !important
-            };
-        });
-    };
-
     render() {
 
-        const { label, onDeleted } = this.props;
-        const { done, important } = this.state;
+        const { label, onDeleted,
+                onToggleImportant,
+                onToggleDone,
+                important, done} = this.props;
 
         let classNames = "TodoListItem";
         if (done) {
@@ -43,13 +22,13 @@ export default class TodoListItem extends Component {
         return (
             <span className={classNames}>
                 <span className={'TodoItemLabel'}
-                      onClick={ this.onLabelClick } >
+                      onClick={ onToggleDone } >
                     {label}
                 </span>
                 <span className={'TodoListButtons'}>
                     <button type={'button'}
                             className={'btn btn-outline-success btn-sm float-right'}
-                            onClick={this.onMarkImportant}>
+                            onClick={onToggleImportant}>
                         <i className={'fa fa-exclamation'}/>
                     </button>
 
