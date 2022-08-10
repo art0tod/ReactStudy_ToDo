@@ -16,3 +16,16 @@
   background: hsl(10, 70%, 60%);
   color: hsl(0, 0%, 22%);
 }
+.ItemAddForm input {
+  margin-right: 10px;
+  border-radius: 10px;
+  background: hsl(0, 0%, 22%);
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+.ItemAddForm input:focus {
+  background: hsl(0, 0%, 22%);
+  color: white;
+  border: 2px solid hsl(10, 70%, 60%);
+}

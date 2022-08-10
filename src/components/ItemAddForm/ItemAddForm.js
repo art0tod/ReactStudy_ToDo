@@ -3,15 +3,36 @@ import './ItemAddForm.css'
 
 export default class ItemAddForm extends Component {
 
+  state = {
+    label: ''
+  };
+
+  onLabelChange = (e) => {
+    console.log(`label: ${e.target.value}`)
+    this.setState({
+      label: e.target.value
+    });
+  };
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.props.onItemAdded(this.state.label);
+  };
+
   render() {
     return (
-      <div className={'ItemAddForm'}>
+      <form className={'ItemAddForm d-flex'}
+            onSubmit={this.onSubmit}>
+
+        <input type={'text'}
+               className={'form-control'}
+               onChange={this.onLabelChange}
+               placeholder={'Название задачи'}/>
         <button
-          className={'btn btn-outline-secondary'}
-          onClick={() => this.props.onItemAdded(`Новая задача`)}>
+          className={'btn btn-outline-secondary'}>
           Добавить задачу
         </button>
-      </div>
+      </form>
     );
   };
 };
