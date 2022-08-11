@@ -7,7 +7,7 @@ export default class AppInfo extends Component {
     return (
       <div className={"AppInfo"}>
         <i><a
-          href={'https://github.com/art0tod'}
+          href={'https://github.com/art0tod/ReactStudy_ToDo'}
           target={'_blank'}>
             by ArtemTodor
           <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
