@@ -18,7 +18,12 @@
   padding: .65rem .5rem .8rem .5rem;
   border-radius: 10px;
   border: 2px solid #e7e7e7;
+  transition: .2s;
 }
+.AppInfo a:hover {
+  background: hsl(10, 70%, 65%);
+}
+
 .AppInfo .ver {
   display: flex;
   margin-top: 1rem;

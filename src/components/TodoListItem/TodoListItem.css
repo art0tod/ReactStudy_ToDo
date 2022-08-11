@@ -6,6 +6,7 @@
 .TodoListItem button {
   width: 30px;
   margin: 0 5px;
+  border: none;
 }
 
 .TodoItemLabel {
