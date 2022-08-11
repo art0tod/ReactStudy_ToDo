@@ -33,7 +33,7 @@ export default class App extends Component {
   }
 
   deleteItem = (id) => {
-    this.setState(({ todoData }) => {
+    this.setState(({todoData}) => {
 
       const index = todoData.findIndex((el) => el.id === id)
       console.log(`Deleted list item with id: "${id}" and index: "${index}"`)
@@ -69,8 +69,10 @@ export default class App extends Component {
   toggleProperty(arr, id, propName) {
     const index = arr.findIndex((el) => el.id === id);
     const oldItem = arr[index];
-    const newItem = {...oldItem,
-      [propName]: !oldItem[propName]};
+    const newItem = {
+      ...oldItem,
+      [propName]: !oldItem[propName]
+    };
 
     return [
       ...arr.slice(0, index),
@@ -96,11 +98,11 @@ export default class App extends Component {
   };
 
   onSearchChange = (searchText) => {
-    this.setState({ searchText });
+    this.setState({searchText});
   };
 
   onFilterChange = (filter) => {
-    this.setState({ filter });
+    this.setState({filter});
   };
 
   search(items, searchText) {
@@ -132,7 +134,7 @@ export default class App extends Component {
 
   render() {
 
-    const { todoData, searchText, filter } = this.state;
+    const {todoData, searchText, filter} = this.state;
 
     const visibleItems = this.filter(
       this.search(todoData, searchText), filter);
@@ -147,7 +149,7 @@ export default class App extends Component {
         <AppHeader todo={todoCount} done={doneCount}/>
         <div className={'todo-panel d-flex'}>
           <SearchPanel
-          onSearchChange={this.onSearchChange}/>
+            onSearchChange={this.onSearchChange}/>
           <ItemStatusFilter
             filter={filter}
             onFilterChange={this.onFilterChange}/>
@@ -158,7 +160,7 @@ export default class App extends Component {
           onDeleted={this.deleteItem}
           onToggleImportant={this.onToggleImportant}
           onToggleDone={this.onToggleDone}/>
-        <ItemAddForm onItemAdded={this.addItem} />
+        <ItemAddForm onItemAdded={this.addItem}/>
         <AppInfo />
       </div>
     )
