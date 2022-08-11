@@ -2,6 +2,7 @@
   margin: 1.5rem auto;
   width: 90vw;
   max-width: 720px;
+  min-width: 400px;
   transition: 1s;
 }
 .todo-panel {

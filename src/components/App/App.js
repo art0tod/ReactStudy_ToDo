@@ -17,8 +17,7 @@ export default class App extends Component {
 
   state = {
     todoData: [
-      this.createTodoItem('Первая задача'),
-      this.createTodoItem('Выучить React'),
+      this.createTodoItem('Добро пожаловать в "Список задач"'),
     ],
     searchText: '',
     filter: 'all'
