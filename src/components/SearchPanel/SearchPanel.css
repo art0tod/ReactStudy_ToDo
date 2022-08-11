@@ -1,9 +1,10 @@
 .search-input {
-  margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid hsl(10, 70%, 60%);
+  border-right: none;
   background: hsl(0, 0%, 22%);
+  width: 70%;
   color: white;
-  border: none;
   transition: 0.2s;
 }
 

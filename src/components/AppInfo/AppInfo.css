@@ -1,0 +1,27 @@
+.AppInfo {
+  color: #e7e7e7;
+  background: hsl(0, 0%, 22%);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.AppInfo a {
+  text-decoration: none;
+  color: #e7e7e7;
+}
+.AppInfo svg {
+  margin: 0 .5rem;
+  fill: #e7e7e7;
+}
+.AppInfo a {
+  background: hsl(10, 70%, 60%);
+  padding: .65rem .5rem .8rem .5rem;
+  border-radius: 10px;
+  border: 2px solid #e7e7e7;
+}
+.AppInfo .ver {
+  display: flex;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: hsl(0 0% 100% / .5);
+}

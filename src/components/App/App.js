@@ -5,6 +5,7 @@ import SearchPanel from "../SearchPanel";
 import TodoList from "../TodoList";
 import ItemStatusFilter from "../ItemStatusFilter/";
 import ItemAddForm from "../ItemAddForm";
+import AppInfo from "../AppInfo";
 
 import './App.css';
 
@@ -103,7 +104,6 @@ export default class App extends Component {
     this.setState({ filter });
   };
 
-
   search(items, searchText) {
     if (searchText.length === 0) {
       return items;
@@ -160,6 +160,7 @@ export default class App extends Component {
           onToggleImportant={this.onToggleImportant}
           onToggleDone={this.onToggleDone}/>
         <ItemAddForm onItemAdded={this.addItem} />
+        <AppInfo />
       </div>
     )
   }

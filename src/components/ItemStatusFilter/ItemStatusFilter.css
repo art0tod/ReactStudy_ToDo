@@ -1,18 +1,27 @@
 .btn-group {
   border: 2px solid hsl(10, 70%, 60%);
-  border-radius: 10px;
-  box-shadow: 0 .25rem 1rem -.3rem #000000;
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  overflow: clip;
 }
 
 .btn-group .btn {
   background: hsl(0, 0%, 22%);
+  border: none;
+  border-radius: 0;
 }
-
+.btn-group .btn:hover{
+  background: hsl(0, 0%, 26%);
+}
 .btn-group .btn-info {
   background: hsl(10, 70%, 60%);
-  border-radius: 10px;
+  border-radius: 0;
+}
+.btn-group .btn-info:hover {
+  background: hsl(10, 70%, 64%);
 }
 
 .btn-group .btn-outline-secondary {
   color: hsl(10, 50%, 60%);
+  border-radius: 0;
 }
