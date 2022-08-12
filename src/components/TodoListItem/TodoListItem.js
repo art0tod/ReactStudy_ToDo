@@ -8,7 +8,8 @@ export default class TodoListItem extends Component {
         const { label, onDeleted,
                 onToggleImportant,
                 onToggleDone,
-                important, done} = this.props;
+                important, done,
+                itemDate } = this.props;
 
         let classNames = "TodoListItem";
         if (done) {
@@ -37,6 +38,9 @@ export default class TodoListItem extends Component {
                             onClick={onDeleted}>
                         <i className={'fa fa-trash'}/>
                     </button>
+                </span>
+                <span className={'date'}>
+                  {itemDate}
                 </span>
             </span>
         );

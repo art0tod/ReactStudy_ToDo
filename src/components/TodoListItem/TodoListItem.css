@@ -45,3 +45,9 @@
   display: flex;
   justify-content: flex-end;
 }
+.date {
+  display: flex;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: hsl(0 0% 100% / .5);
+}

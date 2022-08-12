@@ -23,9 +23,10 @@ export default class App extends Component {
     filter: 'all'
   };
 
-  createTodoItem(label) {
+  createTodoItem(label, itemDate) {
     return {
       label,
+      itemDate,
       important: false,
       done: false,
       id: this.maxId++
@@ -49,10 +50,10 @@ export default class App extends Component {
     });
   };
 
-  addItem = (text) => {
+  addItem = (text, date) => {
     console.log(`Added: ${text}`)
 
-    const newItem = this.createTodoItem(text);
+    const newItem = this.createTodoItem(text, date);
 
     this.setState(({todoData}) => {
       const newArr = [
